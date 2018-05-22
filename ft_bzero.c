@@ -6,18 +6,20 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 11:03:32 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/21 11:06:15 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/22 09:29:22 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_bzero(void *s, size_t n)
 {
-	int i;
+	size_t i;
 	i = 0;
 
 	while (i < n)
 	{
-		*((char*)s+i) = '\0'
-		   i++;	
+		*((char*)s+i) = '\0';
+		 i++;	
 	}
 }	

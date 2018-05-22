@@ -6,11 +6,13 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 11:32:13 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/21 15:45:54 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/22 09:28:34 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.a>
+ #include "libft.h"
+
+int     my_whitespace(char c);
 
 int ft_atoi (const char *str)
 {

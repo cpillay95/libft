@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 11:10:56 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/21 11:26:39 by cpillay          ###   ########.fr       */
+/*   Created: 2018/05/22 13:10:53 by cpillay           #+#    #+#             */
+/*   Updated: 2018/05/22 15:22:06 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *str)
+void	ft_putendl(char const *s)
 {
-	write(1, str, ft_strlen(str));
+	ft_putstr((char *)s);
+	ft_putchar('\n');
 }

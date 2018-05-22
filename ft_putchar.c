@@ -9,10 +9,10 @@
 /*   Updated: 2018/05/21 10:52:54 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 #include <stdio.h>
 
 void	ft_putchar(char c)
 {
-	write(1, &c, 1)
+    write(1, &c, 1);
 }
