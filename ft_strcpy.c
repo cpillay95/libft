@@ -6,16 +6,17 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 15:47:13 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/23 11:06:22 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/24 11:48:59 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char *ft_strcpy(char *sd, const char *ss)
+
+char	*ft_strcpy(char *sd, const char *ss)
 {
 	int index;
-	index = 0;
 
+	index = 0;
 	while (ss[index] != '\0')
 	{
 		sd[index] = ss[index];

@@ -5,15 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/23 14:06:28 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/23 15:41:29 by cpillay          ###   ########.fr       */
+/*   Created: 2018/05/24 12:37:10 by cpillay           #+#    #+#             */
+/*   Updated: 2018/05/24 15:52:34 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putchar(unsigned char c);
-void	ft_putstr(char *str);
 
 void	ft_putnbr(int n)
 {
@@ -29,16 +26,6 @@ void	ft_putnbr(int n)
 		ft_putnbr(n / 10);
 		ft_putchar(n % 10 + '0');
 	}
-
 	else
 		ft_putchar(n + '0');
 }
-
-
-/*int main()
-{
-	long int c;
-	c = 2147483648;
-
-	ft_putnbr(c);
-}*/

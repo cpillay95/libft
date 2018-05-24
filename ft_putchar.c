@@ -6,13 +6,14 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 10:49:39 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/23 10:10:41 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/24 12:34:21 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
 
 void	ft_putchar(unsigned char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }

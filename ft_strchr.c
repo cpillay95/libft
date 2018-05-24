@@ -1,25 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 11:03:32 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/24 12:01:51 by cpillay          ###   ########.fr       */
+/*   Created: 2018/05/24 15:52:45 by cpillay           #+#    #+#             */
+/*   Updated: 2018/05/24 16:10:25 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-void	ft_bzero(void *s, size_t n)
+char *strchr(const char *str, int c)
 {
-	size_t i;
+	int i;
 
 	i = 0;
-	while (i < n)
+	while (str != '\0')
 	{
-		*((char*)s + i) = '\0';
-		i++;
+		if (str[i] == c)
+			return ((char*)c);
+
+		else
+			return (NULL);
 	}
+	return (0);
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+   const char str[] = "http://www.tutorialspoint.com";
+   const char ch = '.';
+   char *ret;
+
+   ret = strchr(str, ch);
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+
+   return(0);
 }
