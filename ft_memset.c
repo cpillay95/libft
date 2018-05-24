@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 11:10:56 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/23 15:01:12 by cpillay          ###   ########.fr       */
+/*   Created: 2018/05/23 10:32:12 by cpillay           #+#    #+#             */
+/*   Updated: 2018/05/23 15:57:38 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-void	ft_putstr(char *str)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	write(1, str, ft_strlen(str));
+	size_t i;
+	char *new;
+	i = 0;
+	new = str;
+	
+	while (i != n)
+	{
+		new[i] = c;
+		i++;
+	}
+	return(new);
 }

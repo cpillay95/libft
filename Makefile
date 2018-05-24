@@ -10,12 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-Clean: all	
-	/bin/rm -f *.o
 all:
-	gcc -c *.c -Wall -Wextra -Werror
-	ar -rc libft.a *.o
-	ranlib libft.a
+    gcc -c *.c -Wall -Wextra -Werror
+    ar -rc libft.a *.o
+    ranlib libft.a
 
 fclean: clean
-	/bin/rm libft.a
+    /bin/rm libft.a
+
+clean: 
+     rm -f *.o 

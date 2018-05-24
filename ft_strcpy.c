@@ -6,12 +6,12 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 15:47:13 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/21 16:02:32 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/23 11:06:22 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char ft_strcpy(char *sd, char *ss)
+char *ft_strcpy(char *sd, const char *ss)
 {
 	int index;
 	index = 0;
@@ -22,5 +22,5 @@ char ft_strcpy(char *sd, char *ss)
 		index++;
 	}
 	sd[index] = '\0';
-	return (*sd);
+	return (sd);
 }
