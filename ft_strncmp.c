@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_whitespace.c                                    :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 10:54:13 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/25 12:41:42 by cpillay          ###   ########.fr       */
+/*   Created: 2018/05/25 14:17:42 by cpillay           #+#    #+#             */
+/*   Updated: 2018/05/25 14:32:04 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		my_whitespace(char c)
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	if (c == ' ' || c == '\t' || c == '\r' ||
-			c == '\v' || c == '\n' || c == '\f')
-		return (1);
-	else
-		return (0);
+	size_t i;
+	unsigned char *cs1;
+	unsigned char *cs2;
+
+	i = 0;
+	cs1 = (unsigned char *)str1;
+	cs2 = (unsigned char *)str2;
+	while ((i < n) && (cs1[i] == cs2[i]))
+	{
+		if (cs1[i] == '\0' || cs2[i] == '\0')
+			break ;	
+		i++;
+	}
+	return (cs1[i] - cs2[i]);
 }

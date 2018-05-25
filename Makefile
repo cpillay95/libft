@@ -6,7 +6,7 @@
 #    By: cpillay <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 09:25:36 by cpillay           #+#    #+#              #
-#    Updated: 2018/05/24 14:33:30 by cpillay          ###   ########.fr        #
+#    Updated: 2018/05/25 14:28:55 by cpillay          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ SRCS = ft_isdigit.c	ft_putendl_fd.c	ft_strcpy.c \
 	   ft_isalnum.c	ft_putchar.c ft_putstr.c \
 	   ft_tolower.c ft_isalpha.c ft_putchar_fd.c \
 	   ft_putstr_fd.c ft_toupper.c ft_isascii.c \
-	   ft_putendl.c	ft_strcmp.c	
+	   ft_putendl.c	ft_strcmp.c ft_strchr.c \
+	   ft_strrchr.c	ft_memcpy.c ft_strncmp.c   
 
 OBJS = $(SRCS:.c=.o)
 

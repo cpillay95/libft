@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_whitespace.c                                    :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 10:54:13 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/25 12:41:42 by cpillay          ###   ########.fr       */
+/*   Created: 2018/05/25 13:53:08 by cpillay           #+#    #+#             */
+/*   Updated: 2018/05/25 14:16:02 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		my_whitespace(char c)
+
+void	*ft_memcpy(void *str1, const void *str2, size_t n)
 {
-	if (c == ' ' || c == '\t' || c == '\r' ||
-			c == '\v' || c == '\n' || c == '\f')
-		return (1);
-	else
-		return (0);
+	int index;
+	char * cs1;
+	char * cs2;	
+
+	index = 0;
+	cs1 = ((char*)str1);
+	cs2 = ((char*)str2);
+	while (index < (int)n)
+	{
+		cs1[index] = cs2[index];
+
+		if (cs2[index] == '\0')
+		{
+			cs1[index] = '\0';
+			break;
+		}
+		 index++;
+	}
+	return (str1);
 }

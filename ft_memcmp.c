@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_whitespace.c                                    :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 10:54:13 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/25 12:41:42 by cpillay          ###   ########.fr       */
+/*   Created: 2018/05/25 13:16:36 by cpillay           #+#    #+#             */
+/*   Updated: 2018/05/25 13:47:08 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		my_whitespace(char c)
+int	memcmp(const void *str, const void *str2, size_t n)
 {
-	if (c == ' ' || c == '\t' || c == '\r' ||
-			c == '\v' || c == '\n' || c == '\f')
-		return (1);
-	else
-		return (0);
+	  int             i;
+      unsigned char   *cs1;
+      unsigned char   *cs2;
+ 
+      i = 0;
+      cs1 = (unsigned char *)str;
+      cs2 = (unsigned char *)str2;
+      
+	  while (cs1[i] && cs2[i] && (cs1[i] == cs2[i]))
+  {
+	  if
 }

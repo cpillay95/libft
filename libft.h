@@ -6,7 +6,7 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 09:29:35 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/24 14:24:18 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/25 14:29:42 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,9 @@ void	ft_putnbr(int c);
 void	ft_putstr_fd(char const *c, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+char	*ft_strchr(const char *str, int c);
+char	*ft_strrchr(const char *str, int c);
+void	*ft_memcpy(void *str1, const void *str2, size_t n);
+int		ft_strncmp(const char *str1, const char *str2, size_t n);
 
 #endif
