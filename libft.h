@@ -6,7 +6,7 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 09:29:35 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/25 14:29:42 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/27 13:41:56 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,7 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 void	*ft_memcpy(void *str1, const void *str2, size_t n);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
+void	*ft_memccpy(void *s1, const void *s2, int c, size_t n);
+void	*ft_memchr(const void *str, int c, size_t n);
 
 #endif
