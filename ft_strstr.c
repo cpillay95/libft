@@ -1,12 +1,10 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 14:33:53 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/24 15:59:40 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/28 14:31:34 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +14,35 @@
 char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int	i;
+	int j;
 
 	i = 0;
+	j = 0;
+
+	if (needle == NULL)
+		return ((char*)haystack);
 
 	while (haystack[i] != '\0')
 	{
-	//	ft_strcmp(needle, haystack);
-		
-	//	if (needle == NULL)
-	//		return ((char*)haystack);
-		
-		if (ft_strcmp(needle, haystack) != 0)
-			return (NULL);
-
-		else 
-			return ((char*)needle);
+		while (needle[j] != '\0')
+		{
+			if (haystack[i] != needle[j])
+			{
+				j = 0;
+				i++;
+				break ;
+			}
+			else
+			{
+				j++;
+				i++;
+			}
+		}
+		i++;
+		if (needle == '\0')
+			return ((char *) needle); 
 	}
-	return ((char*)haystack);
+	return (NULL);
 }
 
 #include <stdio.h>

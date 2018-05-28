@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/27 13:40:45 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/28 11:01:44 by cpillay          ###   ########.fr       */
+/*   Created: 2018/05/28 15:46:41 by cpillay           #+#    #+#             */
+/*   Updated: 2018/05/28 15:55:23 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char	*ft_memchr(const void *str, int c, size_t n)
+void	ft_strclr(char *s)
 {
-	size_t	i;
-	char	*s;
+	int i;
 
 	i = 0;
-	s = (char*)str;
-	while (i < n)
+	while(s[i] != '\0')
 	{
-		if (s[i] == c)
-			return ((char*)&str[i]);
-		else
-			i++;
+		s[i] = '\0';
+		i++;
 	}
-	return (NULL);
 }

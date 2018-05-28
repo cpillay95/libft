@@ -6,7 +6,7 @@
 #    By: cpillay <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 09:25:36 by cpillay           #+#    #+#              #
-#    Updated: 2018/05/27 13:48:58 by cpillay          ###   ########.fr        #
+#    Updated: 2018/05/28 16:19:40 by cpillay          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,9 @@ SRCS = ft_isdigit.c	ft_putendl_fd.c	ft_strcpy.c \
 	   ft_putstr_fd.c ft_toupper.c ft_isascii.c \
 	   ft_putendl.c	ft_strcmp.c ft_strchr.c \
 	   ft_strrchr.c	ft_memcpy.c ft_strncmp.c \
-	   ft_memccpy.c ft_memchr.c    
+	   ft_memccpy.c ft_memchr.c ft_memcmp.c \
+	   ft_memmove.c ft_strncpy.c ft_strclr.c \
+       ft_strequ.c ft_strnequ.c	   
 
 OBJS = $(SRCS:.c=.o)
 

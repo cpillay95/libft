@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memmov.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/27 13:40:45 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/28 11:01:44 by cpillay          ###   ########.fr       */
+/*   Created: 2018/05/28 09:46:37 by cpillay           #+#    #+#             */
+/*   Updated: 2018/05/28 12:13:15 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char	*ft_memchr(const void *str, int c, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
-	char	*s;
+	char	*temp;
+	char	*newdest;
 
 	i = 0;
-	s = (char*)str;
-	while (i < n)
+	temp = (char *)src;
+	newdest = (char *)dest;
+	if (src < dest)
 	{
-		if (s[i] == c)
-			return ((char*)&str[i]);
-		else
-			i++;
+		i = n;
+		while (i > 0)
+		{
+			i--;
+			newdest[i] = temp[i];
+		}
 	}
-	return (NULL);
+	else
+	{
+		while (i < n)
+		{
+			newdest[i] = temp[i];
+			i++;
+		}
+	}
+	return (newdest);
 }

@@ -6,7 +6,7 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 09:29:35 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/27 13:41:56 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/28 16:26:04 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,11 @@ void	*ft_memcpy(void *str1, const void *str2, size_t n);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 void	*ft_memccpy(void *s1, const void *s2, int c, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
+int		ft_memcmp(const void *str, const void *str2, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+char	*ft_strncpy(char *dest, const char *src, size_t n);
+void	ft_strclr(char *s);
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
 
 #endif
