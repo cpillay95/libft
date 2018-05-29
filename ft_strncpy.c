@@ -6,7 +6,7 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 10:52:42 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/28 11:46:00 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/29 08:52:50 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ char	*ft_strncpy(char *dest, const char *src, size_t n)
 	while (src[i] != '\0' && i < n)
 	{
 		dest[i] = src[i];
-		i++;	
+		i++;
 	}
-
 	while (i < n)
 	{
 		dest[i] = '\0';

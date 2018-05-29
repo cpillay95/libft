@@ -1,62 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/24 14:33:53 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/28 14:31:34 by cpillay          ###   ########.fr       */
+/*   Created: 2018/05/29 12:56:37 by cpillay           #+#    #+#             */
+/*   Updated: 2018/05/29 16:20:47 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+static char		*shorten(const char *haystack, const char *needle, int i)
 {
-	int	i;
 	int j;
+	int e;
 
-	i = 0;
+	e = 0;
 	j = 0;
-
-	if (needle == NULL)
-		return ((char*)haystack);
-
 	while (haystack[i] != '\0')
 	{
 		while (needle[j] != '\0')
 		{
-			if (haystack[i] != needle[j])
+			if (haystack[i++] == (needle[j]))
 			{
-				j = 0;
-				i++;
-				break ;
+				j++;
 			}
 			else
 			{
-				j++;
-				i++;
+				j = 0;
+				i = e;
+				e++;
+				break ;
 			}
 		}
-		i++;
-		if (needle == '\0')
-			return ((char *) needle); 
+		if (needle[j] == '\0')
+			return ((char *)&haystack[i - j]);
 	}
 	return (NULL);
 }
 
-#include <stdio.h>
-#include <string.h>
+char			*ft_strstr(const char *haystack, const char *needle)
+{
+	int	i;
 
-
-int main () {
-   const char haystack[20] = "TutorialsPoint";
-   const char needle[10] = "Point";
-   char *ret;
-
-   ret = ft_strstr(haystack, needle);
-
-   printf("The substring is: %s\n", ret);
-
-   return(0);
+	i = 0;
+	if (needle[i] == '\0')
+		return ((char *)haystack);
+	return (shorten(haystack, needle, i));
 }
