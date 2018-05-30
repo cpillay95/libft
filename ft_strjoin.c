@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 11:10:56 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/30 13:22:59 by cpillay          ###   ########.fr       */
+/*   Created: 2018/05/30 13:11:14 by cpillay           #+#    #+#             */
+/*   Updated: 2018/05/30 13:18:42 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr(char *str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (str)
-	{
-		write(1, str, ft_strlen(str));
-	}
+
 }

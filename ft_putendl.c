@@ -6,7 +6,7 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 13:10:53 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/23 15:03:27 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/30 13:23:33 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr((char *)s);
-	ft_putchar('\n');
+	if (s)
+	{
+		ft_putstr((char *)s);
+		ft_putchar('\n');
+	}
 }

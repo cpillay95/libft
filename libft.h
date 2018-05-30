@@ -6,7 +6,7 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 09:29:35 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/29 15:08:17 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/30 12:39:55 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,14 @@
 # include <string.h>
 # include <stdlib.h>
 
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmap(char const *s, char (*f)(char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_strdel(void **as);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
+void	*ft_memalloc(size_t size);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strstr(const char *haystack, const char *needle);
 size_t	ft_strlcat(char *dst, const char *src, size_t);

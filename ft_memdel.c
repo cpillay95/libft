@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 11:10:56 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/30 13:22:59 by cpillay          ###   ########.fr       */
+/*   Created: 2018/05/30 10:23:55 by cpillay           #+#    #+#             */
+/*   Updated: 2018/05/30 10:43:04 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *str)
+void	ft_memdel(void **ap)
 {
-	if (str)
+	if (ap != NULL)
 	{
-		write(1, str, ft_strlen(str));
+		free(*ap);
+		*ap = NULL;
 	}
 }

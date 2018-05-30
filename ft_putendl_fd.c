@@ -6,7 +6,7 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 15:01:25 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/23 15:43:58 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/05/30 13:24:06 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	write(fd, s, ft_strlen((char*)s));
-	write(fd, "\n", 1);
+	if (s)
+	{
+		write(fd, s, ft_strlen((char*)s));
+		write(fd, "\n", 1);
+	}
 }
