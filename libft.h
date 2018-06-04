@@ -6,7 +6,7 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 09:29:35 by cpillay           #+#    #+#             */
-/*   Updated: 2018/05/30 12:39:55 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/06/04 13:10:31 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@
 # include <string.h>
 # include <stdlib.h>
 
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_itoa(int n);
+char	*ft_strtrim(char const *s);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strmap(char const *s, char (*f)(char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_striter(char *s, void (*f)(char *));
@@ -27,7 +31,7 @@ char	*ft_strnew(size_t size);
 void	*ft_memalloc(size_t size);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strstr(const char *haystack, const char *needle);
-size_t	ft_strlcat(char *dst, const char *src, size_t);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strncat(char *dest, const char *src, size_t n);
 char	*ft_strcat(char *dest, const char *src);
 void	ft_putchar(unsigned char c);

@@ -6,7 +6,7 @@
 #    By: cpillay <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 09:25:36 by cpillay           #+#    #+#              #
-#    Updated: 2018/05/30 14:01:17 by cpillay          ###   ########.fr        #
+#    Updated: 2018/06/04 13:10:01 by cpillay          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,9 @@ SRCS = ft_isdigit.c	ft_putendl_fd.c	ft_strcpy.c \
        ft_strncat.c ft_strlcat.c ft_strstr.c \
 	   ft_strnstr.c ft_memalloc.c ft_strnew.c \
 	   ft_memdel.c ft_strdel.c ft_striter.c \
-	   ft_striteri.c ft_strmap.c ft_strmapi.c
+	   ft_striteri.c ft_strmap.c ft_strmapi.c \
+	   ft_strjoin.c ft_strsub.c ft_strtrim.c \
+	   ft_itoa.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -45,7 +47,7 @@ $(OBJS): $(SRCS)
 	gcc -c $(CFLAGS) $(SRCS)
 
 clean:
-	/bin/rm *.o$(OBJ)
+	/bin/rm -rf *.o$(OBJ)
 
 fclean: clean
 	/bin/rm -rf $(NAME)

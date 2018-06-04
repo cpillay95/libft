@@ -1,19 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/23 14:54:36 by cpillay           #+#    #+#             */
-/*   Updated: 2018/06/04 14:02:18 by cpillay          ###   ########.fr       */
+/*   Created: 2018/06/04 09:37:08 by cpillay           #+#    #+#             */
+/*   Updated: 2018/06/04 10:02:01 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+static int	twhitespace(char c)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	if (c == ' ' || c == '\t' || c == '\n')
+		return (1);
+	else
+		return (0);
+}
+
+char		*ft_strtrim(char const *s)
+{
+	int		i;
+	int		j;
+	char	*b;
+
+	b = NULL;
+	i = 0;
+	j = 0;
+	if (s == NULL)
+		return (NULL);
+	while (twhitespace(s[i]))
+		i++;
+	while (s[j] != '\0')
+		j++;
+	while (twhitespace(s[j - 1]))
+		j--;
+	if (j == 0)
+		return (b = "");
+	return (b = ft_strsub(s, i, j - i));
 }

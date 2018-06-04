@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/23 14:54:36 by cpillay           #+#    #+#             */
-/*   Updated: 2018/06/04 14:02:18 by cpillay          ###   ########.fr       */
+/*   Created: 2018/06/04 12:07:57 by cpillay           #+#    #+#             */
+/*   Updated: 2018/06/04 15:23:58 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr_fd(char const *s, int fd)
+int	wordcount(char *str)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	int count;
+
+	count = 0;
+
 }
