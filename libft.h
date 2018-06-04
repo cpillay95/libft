@@ -6,7 +6,7 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 09:29:35 by cpillay           #+#    #+#             */
-/*   Updated: 2018/06/04 13:10:31 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/06/04 16:12:19 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <stdlib.h>
 
+char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strtrim(char const *s);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);

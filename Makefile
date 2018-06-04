@@ -6,7 +6,7 @@
 #    By: cpillay <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 09:25:36 by cpillay           #+#    #+#              #
-#    Updated: 2018/06/04 13:10:01 by cpillay          ###   ########.fr        #
+#    Updated: 2018/06/04 16:08:38 by cpillay          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ SRCS = ft_isdigit.c	ft_putendl_fd.c	ft_strcpy.c \
 	   ft_memdel.c ft_strdel.c ft_striter.c \
 	   ft_striteri.c ft_strmap.c ft_strmapi.c \
 	   ft_strjoin.c ft_strsub.c ft_strtrim.c \
-	   ft_itoa.c
+	   ft_itoa.c ft_strsplit.c
 
 OBJS = $(SRCS:.c=.o)
 
