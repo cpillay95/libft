@@ -6,11 +6,12 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/04 12:07:57 by cpillay           #+#    #+#             */
-/*   Updated: 2018/06/05 15:52:19 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/06/06 08:48:23 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static int	count_split(const char *str, char c)
 {
 	int i;
@@ -18,7 +19,6 @@ static int	count_split(const char *str, char c)
 
 	i = 0;
 	ret = 0;
-	
 	while (str[i] != '\0')
 	{
 		while (str[i] == c)
@@ -35,43 +35,43 @@ static int	count_split(const char *str, char c)
 	return (ret);
 }
 
-static char	**string_split (char **ret, const char *str, char c)
+static char	**string_split(char **ret, const char *str, char c)
 {
 	int i;
-	int j;
-	int k;
+	int end;
+	int start;
 
 	i = 0;
-	j = 0;
-
-		while (str[j] != '\0')
+	end = 0;
+	while (str[end] != '\0')
+	{
+		while (str[end] == c && str[end] != '\0')
+			end++;
+		start = end;
+		while (str[end] != c && str[end] != '\0')
 		{
-			if (str[j] != c && str[j] != '\0')
-			{
-				k = j;
-				while (str[j] != c && str[j] != '\0')
-				{	
-					j++;
-				}
-				ret[i] = ft_strsub(str, k, (j - k ));
-				i++;
-			}
-			j++;
+			end++;
 		}
+		if (end > start)
+		{
+			ret[i] = ft_strsub(str, start, (end - start));
+			i++;
+		}
+	}
 	ret[i] = NULL;
 	return (ret);
-} 
+}
 
 char		**ft_strsplit(char const *s, char c)
 {
-	int count;
-	char **ret;
+	int		count;
+	char	**ret;
 
 	if (s)
 	{
 		count = count_split(s, c);
 		ret = NULL;
-		if(!(ret = (char**)malloc((1 + count) * sizeof(char*))))
+		if (!(ret = (char**)malloc((1 + count) * sizeof(char*))))
 			return (NULL);
 		else
 			string_split(ret, s, c);

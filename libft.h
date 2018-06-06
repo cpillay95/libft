@@ -6,7 +6,7 @@
 /*   By: cpillay <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 09:29:35 by cpillay           #+#    #+#             */
-/*   Updated: 2018/06/04 16:12:19 by cpillay          ###   ########.fr       */
+/*   Updated: 2018/06/06 10:05:49 by cpillay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strmap(char const *s, char (*f)(char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_striter(char *s, void (*f)(char *));
-void	ft_strdel(void **as);
+void	ft_strdel(char **as);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
 void	*ft_memalloc(size_t size);
